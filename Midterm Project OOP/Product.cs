@@ -47,6 +47,11 @@ namespace Midterm_Project_OOP
             return _productType;
         }
 
+        public int GetProductValue()
+        {
+            return _productQuantity;
+        }
+
         /// <summary>
         /// Checker if the product quantity is low
         /// </summary>

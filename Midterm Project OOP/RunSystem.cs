@@ -96,8 +96,16 @@ namespace Midterm_Project_OOP
                                 string inpt3 = Console.ReadLine();
                                 if (int.TryParse(inpt3, out int stockNum))
                                 {
-                                    products[numinpt1 - 1].AdjustProductStock(stockNum);
-                                    Console.WriteLine("Prodcut quantity adjusted successfully!");
+                                    if(stockNum <  products[numinpt1 - 1].GetProductValue() && products[numinpt1 - 1].GetProductValue() == 0)
+                                    {
+                                        Console.WriteLine("Input error!");
+                                    }
+                                    else
+                                    {
+                                        products[numinpt1 - 1].AdjustProductStock(stockNum);
+                                        Console.WriteLine("Prodcut quantity adjusted successfully!");
+                                    }
+                                      
                                 }
                             }
                             Console.ReadKey();
